@@ -8,3 +8,9 @@ index_page = Blueprint('index_page', __name__, template_folder='templates')
 def index():
 
     return render_template('test_index.html')
+
+
+@index_page.route('/bootstrap/')
+def bootstrap():
+
+    return render_template('home/bootstrap_test.html')
