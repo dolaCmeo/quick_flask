@@ -1,0 +1,50 @@
+<!-- extend base layout -->
+{% extends "home/base/base-bootstrap.html" %}
+{% block title %}Bootstrap Test Page{% endblock %}
+{% block css %}{{ super() }}{% endblock %}
+{% block js %}{{ super() }}{% endblock %}
+
+{% block content %}
+{% include "home/nav/bootstrap_nav.html" %}
+
+    <div class="container theme-showcase" role="main">
+
+        {% include "home/content/DIY.html" %}
+
+        {% include "home/content/Jumbotron.html" %}
+
+        {% include "home/content/Buttons.html" %}
+
+        {% include "home/content/Tables.html" %}
+
+        {% include "home/content/Thumbnails.html" %}
+
+        {% include "home/content/Labels.html" %}
+
+        {% include "home/content/Badges.html" %}
+
+        {% include "home/content/Dropdownmenus.html" %}
+
+        {% include "home/content/Navs.html" %}
+
+        {% include "home/content/Navbars.html" %}
+
+        {% include "home/content/Alerts.html" %}
+
+        {% include "home/content/Progressbars.html" %}
+
+        {% include "home/content/Listgroups.html" %}
+
+        {% include "home/content/Panels.html" %}
+
+        {% include "home/content/Wells.html" %}
+
+        {% include "home/content/Carousel.html" %}
+
+    </div> <!-- /container -->
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
