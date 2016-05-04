@@ -1,14 +1,16 @@
 # coding: utf-8
 import sqlite3
+import os
 from flask import Flask, g
 from contextlib import closing
 
-DATABASE = 'sqlite3.db'
+DATABASE = os.path.dirname(__file__) + "\\test.db"
 
 app = Flask(__name__)
 
 
 def connect_db():
+    print DATABASE
     return sqlite3.connect(DATABASE)
 
 

@@ -7,5 +7,14 @@
 <body>
     <h1>Hello World!</h1>
     <h2><a href="/bootstrap/">Bootstrap Test Page</a></h2>
+    <hr>
+    {{ input_data|safe }}
+    <hr>
+    <ul>
+    {% for n in list_data %}
+    {{ n|safe }}
+    {% endfor %}
+    </ul>
+    <hr>
 </body>
 </html>
