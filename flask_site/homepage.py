@@ -1,19 +1,21 @@
-# coding: utf-8
+# coding=utf-8
+
 from flask import Blueprint, render_template, request
+
+__author__ = 'dolacmeo'
 
 index_page = Blueprint('index_page', __name__, template_folder='templates')
 
 
 @index_page.route('/')
 def index():
-
     return render_template('test_index.html')
 
 
 @index_page.route('/bootstrap/')
 def bootstrap():
-
     return render_template('home/bootstrap_test.html')
+
 
 @index_page.route('/test/')
 def testpage():
@@ -34,11 +36,11 @@ def testpage():
 def make_data(ouput_type='html'):
     from database import conn
     db = conn.connect_db()
-    cursor = db.execute("SELECT id, name, address, salary  from COMPANY")
+    cursor = db.execute("SELECT id, name, address, salary  FROM COMPANY")
     output_html = "<ul>\r\n"
     output_list = []
     for n in cursor:
-        a = "<li>"+str(n[0])+"<a title='"+n[2]+"'>"+n[1]+"</a>"+str(n[3])+"</li>\r\n"
+        a = "<li>" + str(n[0]) + "<a title='" + n[2] + "'>" + n[1] + "</a>" + str(n[3]) + "</li>\r\n"
         output_html += a
         output_list.append(a)
     output_html += "</ul>"

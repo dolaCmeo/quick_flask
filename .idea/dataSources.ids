@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - test.db" uuid="35496fc2-a533-43fd-bb25-65c5b9fb49f6">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="COMPANY" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="NAME" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="AGE" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="ADDRESS" sqlType="CHAR(50)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="SALARY" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>

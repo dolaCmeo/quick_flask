@@ -7,14 +7,21 @@
 <body>
     <h1>Hello World!</h1>
     <h2><a href="/bootstrap/">Bootstrap Test Page</a></h2>
+    <h3><a href="/test/">TEST: String HTML</a></h3>
+    <h3><a href="/test2/">TEST: String HTML insert data</a></h3>
+    <h3><a href="/test3/">TEST: GET API data in Template</a></h3>
+    {% if input_data %}
     <hr>
     {{ input_data|safe }}
     <hr>
+    {% endif %}
+    {% if list_data %}
     <ul>
     {% for n in list_data %}
     {{ n|safe }}
     {% endfor %}
     </ul>
     <hr>
+    {% endif %}
 </body>
 </html>
